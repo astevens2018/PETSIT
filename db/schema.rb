@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 2018_05_21_152830) do
     t.bigint "user_id"
     t.string "start_date"
     t.string "end_date"
-    t.text "review"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["host_id"], name: "index_bookings_on_host_id"
