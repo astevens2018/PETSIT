@@ -5,8 +5,8 @@ class HostsController < ApplicationController
   end
 
   def show
-    authorize @host
     @host = Host.find(params[:id])
+    authorize @host
   end
 
   def new
