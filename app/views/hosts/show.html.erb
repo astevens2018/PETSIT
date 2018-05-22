@@ -1,17 +1,46 @@
-<h1>Hi there, <%= @host[:name] %> would love to PetSit!</h1>
-<p>Here are the details:</p>
-
+<div class = "greeting">
+  <h1>Hi there, <%= @host[:name] %> would love to PetSit!</h1>
+  <p>Here are the details:</p>
+</div>
+<div class = "container">
 <table>
-<thead>
-  <tr>
-<p> * <%= @host[:address] %></p>
-</tr>
-<tr></tr>
-<p> * <%= @host[:email] %></p>
-<p> * <%= @host[:phone_number] %></p>
-<p> * <%= @host[:description] %></p>
-<p> * <%= @host[:price] %></p>
-<p> * <%= @host[:rating] %></p>
-<p> * <%= @host[:pet_type] %></p>
-</tr>
+  <thead>
+    <tr> NAME <%= @host[:name] %>
+    </tr>
+    <tr> ADDRESS <%= @host[:address] %>
+    </tr>
+  </thead>
+  <tbody>
+  <div class="row">
+      <div class="col-xs-6"> EMAIL </div>
+      <div class="col-xs-6"> <%= @host[:email] %></p> </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6"> PHONE NUMBER </div>
+      <div class="col-xs-6"> <%= @host[:phone_number] %> </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-6"> A little bit about <%= @host[:name] %></div>
+        <div class="col-xs-6"> <%= @host[:description] %> </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6"> This is how much it'll cost you: </div>
+      <div class="col-xs-6"> $<%= @host[:price] %> </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6">Rating: </div>
+      <div class="col-xs-6"><%= @host[:rating] %></p> </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6"> Pet Type </div>
+      <div class="col-xs-6"> <%= @host[:pet_type] %></p> </div>
+    </div>
+
+</tbody>
 </table>
+</div>
