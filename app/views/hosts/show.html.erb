@@ -1,6 +1,5 @@
 <div class = "greeting">
-  <h1>Hi there, <%= @host[:name] %> would love to PetSit!</h1>
-  <p>Here are the details:</p>
+  Hi there, <%= @host[:name] %> would love to PetSit!
 </div>
 <div class = "main-container">
 <div class = "container">
@@ -12,32 +11,32 @@
     </tr>
   </thead>
   <tbody>
-  <div class="row">
+  <div class="row_email">
       <div class="col-xs-6"> EMAIL </div>
       <div class="col-xs-6"> <%= @host[:email] %></p> </div>
     </div>
 
-    <div class="row">
+    <div class="row_phone">
       <div class="col-xs-6"> PHONE NUMBER </div>
       <div class="col-xs-6"> <%= @host[:phone_number] %> </div>
     </div>
 
-    <div class="row">
+    <div class="row_description">
         <div class="col-xs-6"> A little bit about <%= @host[:name] %></div>
         <div class="col-xs-6"> <%= @host[:description] %> </div>
     </div>
 
-    <div class="row">
+    <div class="row_price">
       <div class="col-xs-6"> This is how much it'll cost you: </div>
       <div class="col-xs-6"> $<%= @host[:price] %> </div>
     </div>
 
-    <div class="row">
+    <div class="row_rating">
       <div class="col-xs-6">Rating: </div>
       <div class="col-xs-6"><%= @host[:rating] %></p> </div>
     </div>
 
-    <div class="row">
+    <div class="row_pet">
       <div class="col-xs-6"> Pet Type </div>
       <div class="col-xs-6"> <%= @host[:pet_type] %></p> </div>
     </div>
