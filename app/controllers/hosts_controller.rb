@@ -1,17 +1,21 @@
 class HostsController < ApplicationController
   def index
+    @hosts = policy_scope(Host).order(created_at: :desc)
     @hosts = Host.all
   end
 
   def show
+    authorize @host
     @host = Host.find(params[:id])
   end
 
   def new
+    authorize @host
     @host = Host.new
   end
 
   def create
+    authorize @host
     @host = Host.new(host_params)
     @host.save
     redirect_to host_path

@@ -1,3 +1,6 @@
+<% if policy(Host).create? %>
+  <%= link_to "New listing", new_host_path %>
+<% end %>
 <div class="content">
   <div class="container-cards">
     <div class="row">
