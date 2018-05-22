@@ -3,48 +3,48 @@
 </div>
 <div class = "main-container">
 <div class = "container">
-<table>
-  <div class="name_address">
-    <div>NAME <%= @host[:name] %>
+  <table>
+    <div class="name_address">
+      <div>NAME <%= @host[:name] %>
+      </div>
+      <div> ADDRESS <%= @host[:address] %>
+      </div>
     </div>
-    <div> ADDRESS <%= @host[:address] %>
-    </div>
-  </div>
-  <tbody>
+    <tbody>
 
 
-    <div class="row_description">
-        <div> A little bit about <%= @host[:name] %> : <%= @host[:description] %> </div>
+      <div class="row_description">
+          <div> A little bit about <%= @host[:name] %> : <%= @host[:description] %> </div>
 
-    </div>
+      </div>
 
-    <div class="row_price">
-      <div>It'll cost you: </div>
-      <div>$<%= @host[:price] %></div>
-    </div>
+      <div class="row_price">
+        <div>It'll cost you: </div>
+        <div>$<%= @host[:price] %></div>
+      </div>
 
-    <div class="row_rating">
-      <div>Rating: </div>
-      <div><%= @host[:rating] %> </div>
-    </div>
+      <div class="row_rating">
+        <div>Rating: </div>
+        <div><%= @host[:rating] %> </div>
+      </div>
 
-    <div class="row_pet">
-      <div>Pet Type </div>
-      <div><%= @host[:pet_type] %></p> </div>
-    </div>
+      <div class="row_pet">
+        <div>Pet Type </div>
+        <div><%= @host[:pet_type] %></p> </div>
+      </div>
 
-     <div class="row_email">
-      <div> EMAIL </div>
-      <div> <%= @host[:email] %></p> </div>
-    </div>
+      <div class="row_email">
+        <div> EMAIL </div>
+        <div> <%= @host[:email] %></p> </div>
+      </div>
 
-    <div class="row_phone">
-      <div> PHONE NUMBER </div>
-      <div> <%= @host[:phone_number] %> </div>
-    </div>
+      <div class="row_phone">
+        <div> PHONE NUMBER </div>
+        <div> <%= @host[:phone_number] %> </div>
+      </div>
 
-    </tbody>
-  </table>
+      </tbody>
+    </table>
 </div>
 </div>
 
