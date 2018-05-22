@@ -1,0 +1,62 @@
+.card {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  padding: 100px;
+  margin: 20px 10px;
+  background-color: grey;
+  position: relative;
+  border-radius: 3px;
+}
+
+.card-category {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.card-user {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.card-title {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.card-headline {
+  font-size: 16px;
+}
+
+.card-description {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.card-description h2 {
+  font-size: 24px;
+  text-align: left;
+}
+.card-description p {
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+.card-price {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 18px;
+  text-align: right;
+}
