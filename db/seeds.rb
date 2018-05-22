@@ -1,11 +1,29 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+h1 = Host.create(
+  name: "John",
+  email: "john@gmail.com",
+  phone_number: "+4406456",
+  description: "Love walking dogs",
+  address: "144 Kollwitz Str.",
+  price: 45,
+  rating: 4,
+  pet_type: "Dog")
 
-h = Host.create(name: "John", email: "john@gmail.com", phone_number: "+4406456", description: "Love walking dogs", address: "144 Kollwitz Str.", price: 45, rating: 4, pet_type: "Dog")
-b = Booking.create(user_id: u.id, host_id: h.id)
-u = User.new
+h2 = Host.create(
+  name: "Jack",
+  email: "jack@gmail.com",
+  phone_number: "+645600",
+  description: "Love cats and dogs",
+  address: "167 Olah Str.",
+  price: 75,
+  rating: 3,
+  pet_type: "Dog")
+
+h3 = Host.create(
+  name: "Alice",
+  email: "alice@gmail.com",
+  phone_number: "+45555556",
+  description: "Big fan of rabbits",
+  address: "76 Black Str.",
+  price: 87,
+  rating: 5,
+  pet_type: "Dog")
