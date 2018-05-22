@@ -1,21 +1,27 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-4">
-      <!-- insert <div class="card"> -->
-    </div>
-    <div class="col-xs-12 col-sm-4">
-      <!-- insert <div class="card"> -->
-    </div>
-    <div class="col-xs-12 col-sm-4">
-      <!-- insert <div class="card"> -->
+<div class="content">
+  <div class="container-cards">
+    <div class="row">
+      <% @hosts.each do |host| %>
+      <div class="col-xs-12 col-sm-6 col-md-6">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+          <div class="card-category"><%= host.rating %> ⭐</div>
+          <div class="card-headline">"<%= host.description %>"</div>
+          <div class="card-description">
+            <h2><%= host.name %></h2>
+            <p>Sitting: <%= host.pet_type %></p>
+          </div>
+          <div class="card-price"> <%= host.price %>€</div>
+        </div>
+        <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+        <a class="card-link" href="#" ></a>
+      </div>
+      <% end %>
     </div>
   </div>
-</div>
-
     <!-- <div class="container-map"> -->
-    <div id="map"></div>
+  <div id="map"></div>
     <!-- Gmaps js: building the map -->
-  </div>
+</div>
   <script>
     function initMap() {
       // Create a map object and specify the DOM element for display.
@@ -36,3 +42,5 @@
   <!-- Gmaps JavaScript -->
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzER7O10ZOUp7FloJzMe2r8X1GIQhgt7Q&callback=initMap">
   </script>
+
+
