@@ -1,1 +1,15 @@
-<h1>This is the new view</h1>
+<div class="container">
+  <h1>This is the new view</h1>
+
+  <%= simple_form_for [@host] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :email %>
+    <%= f.input :phone_number %>
+    <%= f.input :description %>
+    <%= f.input :address %>
+    <%= f.input :price %>
+    <%= f.input :pet_type %>
+
+    <%= f.submit "Create your listing", class: "btn btn-primary" %>
+  <% end %>
+</div>
