@@ -8,14 +8,21 @@ class BookingsController < ApplicationController
   end
 
   def new
+    @host = Host.find(params[:host_id])
     @booking = Booking.new
   end
 
   def create
-    @host = Host.find(params[:id])
     @booking = Booking.new(booking_params)
-    raise
+    @booking.user_id = current_user.id
+    @booking.host_id = params[:host_id]
     @booking.save
-    redirect_to booking_path(@booking.id)
+    redirect_to root_path
   end
+
+  private
+
+   def booking_params
+      params.require(:booking).permit(:host_id, :user_id, :start_date, :end_date)
+    end
 end

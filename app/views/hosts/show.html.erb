@@ -1,15 +1,15 @@
-<div class="host_details">
-  <div class="row">
-      <div class="col-xs-6 col-sm-3">
-        <p>Hi there, <strong><%= @host[:name] %></strong> would love to PetSit!</p>
-        <p>Address: <%= @host[:address] %></p>
-        <p>Cost: <%= @host[:price] %>€</p>
-        <p>Description: <%= @host[:description] %></p>
-        <p>Pet type: <%= @host[:pet_type] %></p>
-        <p>Rating: <%= @host[:rating] %>/5</p>
-        <p>Email: <%= @host[:email] %></p>
-        <p>Phone number:  <%= @host[:phone_number] %></p>
-        <%= link_to "Book now", root_path, class: "btn btn-primary"%></ul>
-      </div>
+ <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+          <p>Hi there, <strong><%= @host[:name] %></strong> would love to PetSit!</p>
+          <p>Address: <%= @host[:address] %></p>
+          <p>Cost: <%= @host[:price] %>€</p>
+          <p>Description: <%= @host[:description] %></p>
+          <p>Pet type: <%= @host[:pet_type] %></p>
+          <p>Rating: <%= @host[:rating] %>/5</p>
+          <p>Email: <%= @host[:email] %></p>
+          <p>Phone number:  <%= @host[:phone_number] %></p>
+          <%= link_to "Book now", new_host_booking_path(@host), class: "btn btn-primary"%></ul>
+        </div>
   </div>
 </div>
