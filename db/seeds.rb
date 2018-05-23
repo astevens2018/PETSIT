@@ -17,14 +17,24 @@ h2 = Host.create(
   address: "167 Olah Str.",
   price: 75,
   rating: 3,
-  pet_type: "Dog")
+  pet_type: "Cat")
 
 h3 = Host.create(
   name: "Alice",
   email: "alice@gmail.com",
   phone_number: "+45555556",
-  description: "Big fan of rabbits",
+  description: "Big fan of turtles",
   address: "76 Black Str.",
   price: 87,
   rating: 5,
-  pet_type: "Dog")
+  pet_type: "Turtle")
+
+h4 = Host.create(
+  name: "Dominik",
+  email: "dominik@gmail.com",
+  phone_number: "+4924555556",
+  description: "Fond of sheeps",
+  address: "67 Herman Str.",
+  price: 25,
+  rating: 1,
+  pet_type: "Goat")
