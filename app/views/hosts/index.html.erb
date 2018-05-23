@@ -3,19 +3,21 @@
     <div class="row">
       <% @hosts.each do |host| %>
       <div class="col-xs-12 col-sm-6 col-md-6">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-          <div class="card-category"><%= host.rating %> ⭐</div>
-          <div class="card-headline">
-            <h2><%= host.name %></h2>
-            "<%= host.description %>"
+        <%= link_to host_path(host.id) do %>
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1505475082603-e217c4a87795?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a2ae05d001cd5f69bd69d2d6c4644148&auto=format&fit=crop&w=2850&q=80');">
+            <div class="card-category"><%= host.rating %> ⭐</div>
+            <div class="card-headline">
+              <h2><%= host.name %></h2>
+              "<%= host.description %>"
+            </div>
+            <div class="card-description">
+              <p>Sitting: <%= host.pet_type %></p>
+            </div>
+            <div class="card-price"> <%= host.price %>€</div>
           </div>
-          <div class="card-description">
-            <p>Sitting: <%= host.pet_type %></p>
-          </div>
-          <div class="card-price"> <%= host.price %>€</div>
-        </div>
-        <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-        <a class="card-link" href="#" ></a>
+        <% end %>
+        <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/DominikNE1995">
+        <a class="card-link" href=""></a>
       </div>
       <% end %>
     </div>
