@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  <div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -12,4 +13,16 @@
           <%= link_to "Book now", new_host_booking_path(@host), class: "btn btn-primary"%></ul>
         </div>
   </div>
+=======
+<div class="container host_details">
+  <h1>Hi there, <%= @host[:name] %> would love to PetSit!</h1>
+  <p>Address: <%= @host[:address] %></p>
+  <p>Cost: <%= @host[:price] %>€</p>
+  <p>Description: <%= @host[:description] %></p>
+  <p>Pet type: <%= @host[:pet_type] %></p>
+  <p>Rating: <%= @host[:rating] %>/5</p>
+  <p>Email: <%= @host[:email] %></p>
+  <p>Phone number:  <%= @host[:phone_number] %></p>
+  <%= link_to "Book now", root_path, class: "btn btn-primary"%></ul>
+>>>>>>> master
 </div>
