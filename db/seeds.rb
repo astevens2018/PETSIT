@@ -1,3 +1,4 @@
+Host.destroy_all
 h1 = Host.create(
   name: "John",
   email: "john@gmail.com",
