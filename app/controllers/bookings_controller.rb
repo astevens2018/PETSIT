@@ -16,8 +16,13 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user_id = current_user.id
     @booking.host_id = params[:host_id]
-    @booking.save
-    redirect_to root_path
+    if @booking.save
+      flash[:success] = "Your booking has been created!"
+      redirect_to hosts_path
+    else
+      flash.now[:alert] = "Your new booking couldn't be created! Are you missing something?"
+      render :new
+    end
   end
 
   private
