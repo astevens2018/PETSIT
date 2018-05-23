@@ -15,7 +15,6 @@ class HostsController < ApplicationController
 
   def create
     @host = Host.new(host_params)
-
     @host.save
     redirect_to host_path(@host.id)
   end
