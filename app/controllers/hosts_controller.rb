@@ -10,13 +10,13 @@ class HostsController < ApplicationController
   end
 
   def new
-    authorize @host
     @host = Host.new
+    authorize @host
   end
 
   def create
-    authorize @host
     @host = Host.new(host_params)
+    authorize @host
     @host.save
     redirect_to host_path
   end
