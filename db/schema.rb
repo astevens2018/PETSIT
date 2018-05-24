@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 2018_05_24_095929) do
     t.text "review"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "pet_name"
+    t.text "special_requirements"
     t.index ["host_id"], name: "index_bookings_on_host_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end

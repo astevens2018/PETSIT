@@ -4,13 +4,12 @@
   <%= simple_form_for [@host] do |f| %>
     <%= f.input :name %>
     <%= f.input :email %>
-    <%= f.input :phone_number %>
+    <%= f.input :price %>
     <%= f.input :description %>
     <%= f.input :address %>
-    <%= f.input :price %>
-    <%= f.input :pet_type %>
+    <%= f.input :phone_number %>
     <%= f.input :username %>
-
+    <%= f.input :pet_type, :collection => %w[Dog Cat Horse Rabbit Turtle Fish Bird Monkey Goat] %>
     <%= f.submit "Create your listing", class: "btn btn-primary" %>
   <% end %>
 </div>
