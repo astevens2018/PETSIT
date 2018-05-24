@@ -1,8 +1,9 @@
+
 <div class="container new_form">
   <h1>Book now!</h1>
   <%= simple_form_for [@host, @booking] do |f| %>
-    <%= f.input :start_date %>
-    <%= f.input :end_date %>
+    <%= f.input :start_date, as: :string, input_html: { class: 'datepicker' } %>
+    <%= f.input :end_date, as: :string, input_html: { class: 'datepicker' } %>
 
     <%= f.submit "Book now!", class: "btn btn-primary" %>
   <% end %>
