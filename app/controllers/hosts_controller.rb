@@ -17,7 +17,10 @@ class HostsController < ApplicationController
 
   def show
     @host = Host.find(params[:id])
-
+    @marker = [{
+      lat: @host.latitude,
+      lng: @host.longitude
+    }]
   end
 
   def new
