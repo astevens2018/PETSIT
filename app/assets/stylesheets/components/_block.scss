@@ -9,11 +9,24 @@
   border-radius: 3px;
 }
 
-.line {
-  border-bottom: 1px solid #bdbdbd;
+.booking {
   -webkit-box-shadow: -1px 1px 3px 0px rgba(179, 177, 179, 0.76);
   -moz-box-shadow: -1px 1px 3px 0px rgba(179, 177, 179, 0.76);
   box-shadow: -1px 1px 3px 0px rgba(179, 177, 179, 0.76);
+  border-radius: 3px;
   margin-top: 20px;
   margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid rgba(110, 187, 133, 0.664);
+}
+
+.hosting {
+  -webkit-box-shadow: -1px 1px 3px 0px rgba(179, 177, 179, 0.76);
+  -moz-box-shadow: -1px 1px 3px 0px rgba(179, 177, 179, 0.76);
+  box-shadow: -1px 1px 3px 0px rgba(179, 177, 179, 0.76);
+  border-radius: 3px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ffb74d;
 }
