@@ -39,7 +39,7 @@ class HostsController < ApplicationController
     private
 
     def host_params
-      params.require(:host).permit(:name, :email, :phone_number, :description, :address, :price, :pet_type)
+      params.require(:host).permit(:name, :email, :phone_number, :description, :address, :price, :pet_type, :username, :image)
     end
 
 end

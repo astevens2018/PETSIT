@@ -7,5 +7,6 @@ validates :phone_number, presence: true, uniqueness: true
 validates :description, presence: true
 validates :address, presence: true, uniqueness: true
 validates :price, presence: true
-validates :pet_type, presence: true, inclusion: {in: ["dog", "cat", "horse", "rabbit", "turtle", "fish", "bird", "monkey", "goat"]}
+validates :username, presence: true
+validates :pet_type, presence: true, inclusion: {in: ["Dog", "Cat", "Horse", "Rabbit", "Turtle", "Fish", "Bird", "Monkey", "Goat"]}
 end
