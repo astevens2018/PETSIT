@@ -22,7 +22,6 @@ class HostsController < ApplicationController
 
   def new
     @host = Host.new
-
   end
 
   def create
