@@ -1,3 +1,4 @@
+
 <div class="container host_details">
   <h1>Hi there, <%= @host[:name] %> would love to PetSit!</h1>
   <p>Address: <%= @host[:address] %></p>
@@ -7,5 +8,5 @@
   <p>Rating: <%= @host[:rating] %>/5</p>
   <p>Email: <%= @host[:email] %></p>
   <p>Phone number:  <%= @host[:phone_number] %></p>
-  <%= link_to "Book now", root_path, class: "btn btn-primary"%></ul>
+  <%= link_to "Book now", new_host_booking_path(@host), class: "btn btn-primary"%>
 </div>
