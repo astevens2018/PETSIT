@@ -8,7 +8,7 @@ validates :description, presence: true
 validates :address, presence: true, uniqueness: true
 validates :price, presence: true
 validates :username, presence: true
-validates :pet_type, presence: true, inclusion: {in: ["Dog", "Cat", "Horse", "Rabbit", "Turtle", "Fish", "Bird", "Monkey", "Goat"]}
+validates :pet_type, presence: true, inclusion: {in: ["Dog", "Cat", "Horse", "Rabbit", "Turtle", "Fish", "Bird", "Monkey", "Goat", "Snake", "Ginny Pig"]}
 geocoded_by :address
 after_validation :geocode, if: :will_save_change_to_address?
 end

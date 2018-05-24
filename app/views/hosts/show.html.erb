@@ -1,21 +1,20 @@
 
 <div class="container host_details">
   <h1>Hi there, <%= @host[:name] %> would love to PetSit!</h1>
+  <img src="https://images.unsplash.com/<%= @host.image %>" height="300" width="450" id="host_image">
   <p>Address: <%= @host[:address] %></p>
-  <p>Cost: <%= @host[:price] %>€</p>
   <p>Description: <%= @host[:description] %></p>
   <p>Pet type: <%= @host[:pet_type] %></p>
+  <p>Cost: <%= @host[:price] %>€</p>
   <p>Rating: <%= @host[:rating] %>/5</p>
   <p>Email: <%= @host[:email] %></p>
   <p>Phone number:  <%= @host[:phone_number] %></p>
   <%= link_to "Book now", new_host_booking_path(@host), class: "btn btn-primary"%>
 </div>
 
-
-
 <div
-  id="map"
+  id="map-show"
   style="width: 100%;
   height: 600px;"
-  data-markers="<%= @markers.to_json %>"
+  data-marker="<%= @marker.to_json %>"
 ></div>

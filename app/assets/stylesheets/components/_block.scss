@@ -52,3 +52,9 @@
   color: grey;
   opacity: 0.8;
 }
+
+.profile-block {
+  flex: 0 0 450px;
+  position: sticky !important;
+  top: 0 !important;
+}
