@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :hosts do
     resources :bookings
   end
+  get '/profile/:id', to: 'profiles#show'
 end

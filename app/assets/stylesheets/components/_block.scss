@@ -1,0 +1,19 @@
+.block {
+  background-color: white;
+  padding: 10px;
+  padding-left: 20px;
+  margin: 10px;
+  -webkit-box-shadow: -1px 1px 3px 0px rgba(179, 177, 179, 0.76);
+  -moz-box-shadow: -1px 1px 3px 0px rgba(179, 177, 179, 0.76);
+  box-shadow: -1px 1px 3px 0px rgba(179, 177, 179, 0.76);
+  border-radius: 3px;
+}
+
+.line {
+  border-bottom: 1px solid #bdbdbd;
+  -webkit-box-shadow: -1px 1px 3px 0px rgba(179, 177, 179, 0.76);
+  -moz-box-shadow: -1px 1px 3px 0px rgba(179, 177, 179, 0.76);
+  box-shadow: -1px 1px 3px 0px rgba(179, 177, 179, 0.76);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class=" col-md-3 block"><%= current_user.email %>
+    </div>
+    <div class="col-md-7 block"><h2>Bookings:</h2>
+    <% @user_bookings.each do |booking| %>
+       <p>Booking ID:</p><%= booking.id %>
+       <p>Booking user:</p><%= booking.user_id %>
+       <% raise %>
+       <p>Host</p><%=  %>
+       <p>Booking Start Date:</p><%= booking.start_date %>
+       <p>Booking End Date:</p><%= booking.end_date %>
+       <div class="line"></div>
+    <% end %>
+     </div>
+    </div>
+    <div class="row">
+    <div class="col-12 col-sm-6 col-md-7 align-right block"><h2>Host Listing:</h2>
+    <% Host.all.each do |host| %>
+       <p>Host ID:</p><%= host.id %>
+       <p>Host Address:</p><%= host.address %>
+       <p>Host Phone number:</p><%= host.phone_number %>
+       <p>Host Pet Type:</p><%= host.pet_type %>
+       <div class="line">
+       </div>
+    <% end %>
+    </div>
+    </div>
+
+
+</div>
