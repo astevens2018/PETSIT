@@ -4,4 +4,3 @@
 //= require bootstrap-datepicker
 //= require_tree .
 //= navbar
-
