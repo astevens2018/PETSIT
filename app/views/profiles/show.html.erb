@@ -1,7 +1,16 @@
 <div class="container">
   <div class="row">
-    <div class=" col-md-3 block">
-      <p><%= current_user.name %></p>
+    <div class=" col-md-3 block profile-block">
+      <img class="rounded" src="https://kitt.lewagon.com/placeholder/users/freddykwan91" height=120px width=120px alt="lady">
+      <div class="profile-title">
+        <p><strong><%= current_user.name %></strong></p>
+      </div>
+      <div class="profile-email">
+        <p><%= current_user.email %></p>
+      </div>
+      <div class="profile-status">
+      <p><strong>Status:</strong> 💔 @channel</p>
+      </div>
       <a href="#">Edit profile</a>
     </div>
     <div class="col-md-7 block"><h2>Pet bookings:</h2>
@@ -19,15 +28,20 @@
           height: 600px;"
           data-marker="<%= @marker.to_json %>"
         ></div>
+        <br>
+        <br>
+        <button type="button" class="btn btn-primary">Edit</button>
+        <button type="button" class="btn btn-danger">Delete</button>
       </div>
     <% end %>
+
     </div>
   </div>
   <div class="row">
     <div class=" col-md-3 block" style="opacity: 0;"><%= current_user.email %>
     </div>
     <div class="col-12 col-sm-6 col-md-7 align-right block"><h2>Pet hostings:</h2>
-      <div class="hosting">You're not a host yet. <a href="#">Become a host!</a></div>
+      <div class="hosting">You're not a host yet. <%= link_to("Become a pet host!", new_host_path) %></div>
     </div>
   </div>
 </div>
