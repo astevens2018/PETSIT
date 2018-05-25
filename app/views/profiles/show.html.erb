@@ -22,6 +22,7 @@
     <div class="col-md-7 block"><h2>Pet bookings:</h2>
     <% @user_bookings.each do |booking| %>
       <div class="booking">
+      <li data-booking-id="<%= booking.id %>">
         <p class="text-center"><strong>Booking (<%= booking.id %>)</strong></p>
         <p><strong><%= booking.pet_name %></strong> is staying with <strong><%= booking.host.name %></strong></p>
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/<%= @host.image %>');"></div>
@@ -37,7 +38,8 @@
         <br>
         <br>
         <button type="button" class="btn btn-primary">Edit</button>
-        <button type="button" class="btn btn-danger"><%= link_to('Cancel', booking_path(task), method: :delete, data: { confirm:"Are you sure you want to delete '#{booking[:booking] }'?" }) %></button>
+        <button type="button" class="btn btn-danger"><%= link_to "Delete", host_booking_path(booking.host, booking), remote: true, method: :delete %></button>
+      </li>
       </div>
     <% end %>
 

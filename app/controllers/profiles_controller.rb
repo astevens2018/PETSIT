@@ -9,11 +9,3 @@ class ProfilesController < ApplicationController
       lng: @host.longitude
     }]
   end
-
-  def destroy
-    @booking = Booking.find(params[:id])
-    @booking.destroy
-    # redirecting to the index
-    redirect_to profile_path(current_user)
-  end
-end
