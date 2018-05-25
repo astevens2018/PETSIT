@@ -1,3 +1,7 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+
+
 
 <div class="container host_details">
   <div class="container welcome_book">
@@ -6,23 +10,32 @@
   <div class="container hoster_image">
     <img src="https://images.unsplash.com/<%= @host.image %>" height="300" width="450" id="host_image">
   </div>
+
+
   <div class="container hoster_descrip">
-  <p>Rating: <%= @host[:rating] %>/5</p>
-  <p>Cost: <%= @host[:price] %>€</p>
-  <p>Address: <%= @host[:address] %></p>
+
+  <p><i class="fas fa-euro-sign"></i>: <%= @host[:price] %></p>
   <p>A bit about <%= @host[:name] %>: <%= @host[:description] %></p>
   <p>Pet type: <%= @host[:pet_type] %></p>
 
-
-  <p>Email: <%= @host[:email] %></p>
-  <p>Phone number:  <%= @host[:phone_number] %></p>
+  <p><i class="far fa-address-card"></i> <%= @host[:address] %></p>
+  <p><i class="fas fa-envelope-square"></i>: <%= @host[:email] %>     |
+  <i class="fas fa-mobile-alt"></i>  <%= @host[:phone_number] %></p>
+    <div class="container circle_text">
+      RATING <repeat n=<%= @host[:rating] %>></repeat>
+    </div>
   <%= link_to "Book now", new_host_booking_path(@host), class: "btn btn-primary_book_me"%>
-</div>
+
+  </div>
+
 </div>
 
+<div class="map_box">
 <div
   id="map-show"
-  style="width: 100%;
-  height: 600px;"
+  style="width: 40%;
+  height: 300px;"
   data-marker="<%= @marker.to_json %>"
-></div>
+  />
+</div>
+</div>
