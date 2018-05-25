@@ -1,4 +1,10 @@
 <div class="container">
+  <div class="container container-flash">
+        <% flash.each do |name, msg| %>
+          <%= content_tag :div, msg, class: [:alert, alert_for(name)] %>
+        <% end %>
+        <%= yield %>
+  </div>
   <div class="row">
     <div class=" col-md-3 block profile-block">
       <img class="rounded" src="https://kitt.lewagon.com/placeholder/users/freddykwan91" height=120px width=120px alt="lady">
@@ -31,7 +37,7 @@
         <br>
         <br>
         <button type="button" class="btn btn-primary">Edit</button>
-        <button type="button" class="btn btn-danger">Delete</button>
+        <button type="button" class="btn btn-danger"><%= link_to('Cancel', booking_path(task), method: :delete, data: { confirm:"Are you sure you want to delete '#{booking[:booking] }'?" }) %></button>
       </div>
     <% end %>
 
