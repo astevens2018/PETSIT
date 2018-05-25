@@ -1,12 +1,6 @@
 <div class="content">
   <div class="container-cards">
     <div class="row">
-    <div class="container container-flash">
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, class: [:alert, alert_for(name)] %>
-      <% end %>
-      <%= yield %>
-    </div>
       <% @hosts.each do |host| %>
       <div class="col-xs-12 col-sm-6 col-md-6">
         <%= link_to host_path(host.id) do %>
@@ -28,22 +22,10 @@
       <% end %>
     </div>
   </div>
-</div>
-
-  <div
+    <div
     id="map"
     style="width: 100%;
     height: 600px;"
     data-markers="<%= @markers.to_json %>"
   ></div>
 
-
-<!-- ############## -->
-<!--
-<%= form_tag hosts_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a petsitter"
-  %>
-<% end %> -->
