@@ -1,2 +1,5 @@
 document.querySelector("[data-booking-id='<%= @booking.id %>']")
   .remove();
+
+const containerFlash = document.querySelector('.container-flash')
+containerFlash.insertAdjacentHTML('beforeend', '<%= j render "shared/flash", flash: flash %>')

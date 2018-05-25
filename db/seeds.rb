@@ -142,3 +142,27 @@ h12 = Host.create!(
   username: "luijoy",
   pet_type: "Dog",
   image: "photo-1489417139533-915815598d31?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2642373de2eddf3629e9ff52550c8294&auto=format&fit=crop&w=1410&q=80")
+
+h13 = Host.create!(
+  name: "Uma",
+  email: "uma@gmail.com",
+  phone_number: "+49187673859",
+  description: "Rodeo baby!",
+  address: "Am Wriezener Bahnhof, 10243 Berlin",
+  price: 90,
+  rating: 3,
+  username: "jane",
+  pet_type: "Horse",
+  image: "photo-1516791871747-7c23364655f4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a359cd995f3fb2eebd226c0d799f234d&auto=format&fit=crop&w=2100&q=80")
+
+h14 = Host.create!(
+  name: "Lui",
+  email: "lui@gmail.com",
+  phone_number: "+49191222859",
+  description: "I got rabies",
+  address: "Rhauptstraße 15, 10317 Berlin",
+  price: 50,
+  rating: 2,
+  username: "albert",
+  pet_type: "Rabbit",
+  image: "photo-1516304221833-d00542da8aae?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b83307016893e9dfe86c162a902e7e70&auto=format&fit=crop&w=2100&q=80")

@@ -1,9 +1,7 @@
 <div class="container">
   <div class="container container-flash">
-        <% flash.each do |name, msg| %>
-          <%= content_tag :div, msg, class: [:alert, alert_for(name)] %>
-        <% end %>
-        <%= yield %>
+        <%= render 'shared/flash', flash: flash %>
+        <%# yield %>
   </div>
   <div class="row">
     <div class=" col-md-3 block profile-block">
@@ -25,15 +23,16 @@
       <li data-booking-id="<%= booking.id %>">
         <p class="text-center"><strong>Booking (<%= booking.id %>)</strong></p>
         <p><strong><%= booking.pet_name %></strong> is staying with <strong><%= booking.host.name %></strong></p>
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/<%= @host.image %>');"></div>
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/<%= booking.host.image %>');"></div>
         <p><strong>Starting:</strong> <%= booking.start_date %>
         <p><strong>Ending:</strong> <%= booking.end_date %>
-        <p><strong>Location:</strong> <%= @host.address %>
+        <p><strong>Location:</strong> <%= booking.host.address %>
+        <% marker = [{lat: booking.host.latitude, lng: booking.host.longitude}] %>
         <div
           id="map-dashboard"
           style="width: 100%;
           height: 600px;"
-          data-marker="<%= @marker.to_json %>"
+          data-marker="<%= marker.to_json %>"
         ></div>
         <br>
         <br>

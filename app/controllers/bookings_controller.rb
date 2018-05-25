@@ -17,7 +17,7 @@ class BookingsController < ApplicationController
     @booking.user_id = current_user.id
     @booking.host_id = params[:host_id]
     if @booking.save
-      flash[:success] = "Success!"
+      flash[:success] = "Success! Your booking has been created! #{@booking.pet_name} is staying with #{@booking.host.name} from #{@booking.start_date} until #{@booking.end_date}."
       flash[:success].html_safe
       redirect_to profile_path(current_user)
     else
@@ -29,7 +29,7 @@ class BookingsController < ApplicationController
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
-    flash[:success] = "Success!"
+    flash[:success] = "Booking deleted!"
   end
 
   private
