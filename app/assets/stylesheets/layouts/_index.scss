@@ -61,8 +61,22 @@ h3 {
   text-align: center;
 }
 
-#map {
-  flex: 0 0 450px;
-  position: sticky !important;
-  top: 0 !important;
+.search-container {
+    display: flex;
+    justify-content: center
 }
+
+.searchbar {
+  padding: 20px;
+  margin: 20px;
+  width: 500px;
+  text-align:center;
+}
+
+.results {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+

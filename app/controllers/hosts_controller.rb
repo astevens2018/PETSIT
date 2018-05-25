@@ -13,6 +13,14 @@ class HostsController < ApplicationController
         # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
       }
     end
+
+    if params[:query].present?
+      sql_query = "pet_type ILIKE :query OR name ILIKE :query"
+      @hosts = Host.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @hosts = Host.all
+    end
+
   end
 
   def show

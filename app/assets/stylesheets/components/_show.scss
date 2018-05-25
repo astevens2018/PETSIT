@@ -1,6 +1,6 @@
 .host_details {
-  background-color: rgba(224, 224, 224, 0.562);
-  padding: 20px 40px;
+  background-color: #A3C4BC;
+  padding: 20px 20px;
   box-shadow: 1px 1px 3px #f0f0f0;
   text-align: center;
 }
@@ -11,4 +11,42 @@
 
 li {
   list-style-type: none;
+
+.btn-primary_book_me {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+
+     background-color: #1C6E8C;
+     color: white;
+}
+
+.btn-primary_book_me:hover {
+      background-color: #1C6E8C;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.btn-primary_book_me:active {
+    position:relative;
+    top:1px;
+}
+
+.btn-primary_host {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    float: right;
+     margin-right: 15px;
+     background-color: #1C6E8C;
+     color: white;
+}
+
+.btn-primary_host:hover {
+      background-color: #1C6E8C;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.btn-primary_host:active {
+    position:relative;
+    top:1px;
 }

@@ -1,15 +1,24 @@
-<div class="container new_form">
-  <h1>One more step to greatness!</h1>
+<div class="container background_dog">
+<div class="container new_form_hosts">
 
+  <div class="container great">
+
+    <h1>You're almost there! Just need your deets...</h1>
+  </div>
+  <div class="form">
   <%= simple_form_for [@host] do |f| %>
     <%= f.input :name %>
     <%= f.input :email %>
-    <%= f.input :price %>
+    <%= f.input :price, input_html: { min: '0', step: 'any' } %>
     <%= f.input :description %>
     <%= f.input :address %>
     <%= f.input :phone_number %>
     <%= f.input :username %>
-    <%= f.input :pet_type, :collection => %w[Dog Cat Horse Rabbit Turtle Fish Bird Monkey Goat Ginny Pig Snake] %>
-    <%= f.submit "Create your listing", class: "btn btn-primary" %>
+
+    <%= f.input :pet_type, :collection => %w[Dog Cat Horse Rabbit Turtle Fish Bird Monkey Goat] %>
+    <%= f.submit "Create your listing", class: "btn btn-primary_host" %>
+
   <% end %>
+</div>
+</div>
 </div>

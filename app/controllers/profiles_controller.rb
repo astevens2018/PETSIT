@@ -9,4 +9,3 @@ class ProfilesController < ApplicationController
       lng: @host.longitude
     }]
   end
-end
