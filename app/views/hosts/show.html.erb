@@ -7,17 +7,46 @@
   </div>
 
 
-  <div class="container hoster_descrip">
+<div class="container hoster_descrip">
+    <div class="container">
+      <div class="row">
+          <div class="col-sm-6">
+            <p>Rating: <repeat n=<%= @host[:rating] %>></repeat></p>
+          </div>
+          <div class="col-sm-6">
+            <p><strong>Pet type:</strong>:<br> <i class="fas fa-paw"></i> <%= @host[:pet_type] %></p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-sm-6">
+            <p><i class="fas fa-envelope-square"></i> <%= @host[:email] %>
+          </div>
+          <div class="col-sm-6">
+           <p><i class="fas fa-mobile-alt"></i> <%= @host[:phone_number] %></p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-sm-6">
+            <p><i class="far fa-user-circle"></i> <%= @host[:description] %></p>
+          </div>
+          <div class="col-sm-6">
+            <p><i class="far fa-address-card"></i> <%= @host[:address] %></p>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+            <h3><strong>Price:</strong> <i class="fas fa-euro-sign"></i> <%= @host[:price] %></h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <%= link_to "Book now", new_host_booking_path(@host), class: "btn btn-primary_book_me"%>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <p><repeat n=<%= @host[:rating] %>></repeat></p>
-  <p><i class="fas fa-euro-sign"></i> <%= @host[:price] %></p>
-  <p><i class="fas fa-paw"></i> <%= @host[:pet_type] %></p>
-  <p><i class="far fa-user-circle"></i> <%= @host[:description] %></p>
-  <p><i class="far fa-address-card"></i> <%= @host[:address] %></p>
-  <p><i class="fas fa-envelope-square"></i> <%= @host[:email] %>
-  <p><i class="fas fa-mobile-alt"></i> <%= @host[:phone_number] %></p>
 
-  <%= link_to "Book now", new_host_booking_path(@host), class: "btn btn-primary_book_me"%>
   </div>
 </div>
 
