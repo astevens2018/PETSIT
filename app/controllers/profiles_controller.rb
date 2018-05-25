@@ -16,6 +16,4 @@ class ProfilesController < ApplicationController
     # redirecting to the index
     redirect_to profile_path(current_user)
   end
-
-  end
 end
