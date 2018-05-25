@@ -155,14 +155,14 @@ h13 = Host.create!(
   pet_type: "Horse",
   image: "photo-1516791871747-7c23364655f4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a359cd995f3fb2eebd226c0d799f234d&auto=format&fit=crop&w=2100&q=80")
 
-h14 = Host.create!(
-  name: "Lui",
-  email: "lui@gmail.com",
-  phone_number: "+49191222859",
-  description: "Rabies",
-  address: "Rhauptstraße 15, 10317 Berlin",
-  price: 50,
-  rating: 2,
-  username: "albert",
-  pet_type: "Rabbit",
-  image: "photo-1516304221833-d00542da8aae?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b83307016893e9dfe86c162a902e7e70&auto=format&fit=crop&w=2100&q=80")
+# h14 = Host.create!(
+#   name: "Lui",
+#   email: "lui@gmail.com",
+#   phone_number: "+49191222859",
+#   description: "Rabies",
+#   address: "Rhauptstraße 15, 10317 Berlin",
+#   price: 50,
+#   rating: 2,
+#   username: "albert",
+#   pet_type: "Rabbit",
+#   image: "photo-1516304221833-d00542da8aae?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b83307016893e9dfe86c162a902e7e70&auto=format&fit=crop&w=2100&q=80")
