@@ -139,6 +139,6 @@ h12 = Host.create!(
   address: "Rheinsberger Str. 76/77, 10115 Berlin",
   price: 100,
   rating: 1,
-  username: "umabpatel",
-  pet_type: "Dogs",
-  image: "https://images.unsplash.com/photo-1489417139533-915815598d31?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2642373de2eddf3629e9ff52550c8294&auto=format&fit=crop&w=1410&q=80")
+  username: "luijoy",
+  pet_type: "Dog",
+  image: "photo-1489417139533-915815598d31?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2642373de2eddf3629e9ff52550c8294&auto=format&fit=crop&w=1410&q=80")
