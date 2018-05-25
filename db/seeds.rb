@@ -71,17 +71,17 @@ h6 = Host.create!(
   pet_type: "Rabbit",
   image: "photo-1523537293918-77c47742156f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=468726efd8005c48e7c7e322902d36bd&auto=format&fit=crop&w=976&q=80")
 
-# h7 = Host.create!(
-#   name: "Oscar",
-#   email: "oscar@gmail.com",
-#   phone_number: "+4914587338856",
-#   description: "I used to have 10 ginny pigs when I was young. I just enjoy hanging out with them, living up the good old times you know",
-#   address: "Rudi-Dutschke-Straße 26, 10969 Berlin",
-#   price: 9,
-#   rating: 2,
-#   username: "irock",
-#   pet_type: "Ginny Pig",
-#   image: "photo-1513301650049-3c5ea530b25f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2510a0be359f6bce44a0977dc8b8f66a&auto=format&fit=crop&w=2850&q=80")
+h7 = Host.create!(
+  name: "Oscar",
+  email: "oscar@gmail.com",
+  phone_number: "+4914587338856",
+  description: "I used to have 10 ginny pigs when I was young. I just enjoy hanging out with them, living up the good old times you know",
+  address: "Rudi-Dutschke-Straße 26, 10969 Berlin",
+  price: 9,
+  rating: 2,
+  username: "irock",
+  pet_type: "Ginny Pig",
+  image: "photo-1513301650049-3c5ea530b25f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2510a0be359f6bce44a0977dc8b8f66a&auto=format&fit=crop&w=2850&q=80")
 
 h8 = Host.create!(
   name: "Ferdinand",

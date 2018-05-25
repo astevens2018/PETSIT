@@ -17,10 +17,11 @@ class BookingsController < ApplicationController
     @booking.user_id = current_user.id
     @booking.host_id = params[:host_id]
     if @booking.save
-      flash[:success] = "Your booking has been created! #{@booking.pet_name} will have a great time from #{@booking.start_date} until #{@booking.end_date}"
-      redirect_to hosts_path
+      flash[:success] = "Success! Your booking has been created! #{@booking.pet_name} is staying with #{@booking.host.name} from #{@booking.start_date} until #{@booking.end_date}."
+      flash[:success].html_safe
+      redirect_to profile_path(current_user)
     else
-      flash.now[:alert] = "Your new booking couldn't be created! Are you missing something?"
+      flash.now[:alert] = "Your new booking couldn't be created! Please try again!"
       render :new
     end
   end
