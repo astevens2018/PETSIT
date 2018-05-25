@@ -1,15 +1,23 @@
 
 <div class="container host_details">
-  <h1>Hi there, <%= @host[:name] %> would love to PetSit!</h1>
-  <img src="https://images.unsplash.com/<%= @host.image %>" height="300" width="450" id="host_image">
-  <p>Address: <%= @host[:address] %></p>
-  <p>Description: <%= @host[:description] %></p>
-  <p>Pet type: <%= @host[:pet_type] %></p>
-  <p>Cost: <%= @host[:price] %>€</p>
+  <div class="container welcome_book">
+    <h1>Hi there, <%= @host[:name] %> would love to PetSit!</h1>
+  </div>
+  <div class="container hoster_image">
+    <img src="https://images.unsplash.com/<%= @host.image %>" height="300" width="450" id="host_image">
+  </div>
+  <div class="container hoster_descrip">
   <p>Rating: <%= @host[:rating] %>/5</p>
+  <p>Cost: <%= @host[:price] %>€</p>
+  <p>Address: <%= @host[:address] %></p>
+  <p>A bit about <%= @host[:name] %>: <%= @host[:description] %></p>
+  <p>Pet type: <%= @host[:pet_type] %></p>
+
+
   <p>Email: <%= @host[:email] %></p>
   <p>Phone number:  <%= @host[:phone_number] %></p>
-  <%= link_to "Book now", new_host_booking_path(@host), class: "btn btn-primary"%>
+  <%= link_to "Book now", new_host_booking_path(@host), class: "btn btn-primary_book_me"%>
+</div>
 </div>
 
 <div
