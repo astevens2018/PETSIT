@@ -1,20 +1,14 @@
-<div class="container host_details">
-  <div class="container welcome_book">
-    <h1>Hi there, <%= @host[:name] %> would love to PetSit!</h1>
+<div class="container">
+  <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/<%= @host.image %>');">
+  <h1>Hi there, <%= @host[:name] %> would love to PetSit!</h1>
   </div>
-  <div class="container hoster_image">
-    <img src="https://images.unsplash.com/<%= @host.image %>" height="300" width="450" id="host_image">
-  </div>
-
-
-<div class="container hoster_descrip">
-    <div class="container">
+    <div class="container_show">
       <div class="row">
           <div class="col-sm-6">
             <p>Rating: <repeat n=<%= @host[:rating] %>></repeat></p>
           </div>
           <div class="col-sm-6">
-            <p><strong>Pet type:</strong>:<br> <i class="fas fa-paw"></i> <%= @host[:pet_type] %></p>
+            <p>Pet type:<br> <i class="fas fa-paw"></i> <%= @host[:pet_type] %></p>
           </div>
       </div>
       <div class="row">
@@ -41,12 +35,18 @@
       <div class="row">
         <div class="col-sm-12">
           <%= link_to "Book now", new_host_booking_path(@host), class: "btn btn-primary_book_me"%>
+          <br>
+          <br>
+          <br>
         </div>
       </div>
     </div>
   </div>
-
-
-  </div>
 </div>
 
+
+<!--
+  <div class="container hoster_image">
+    <img src="https://images.unsplash.com/<%= @host.image %>" height="300" width="450" id="host_image">
+  </div>
+ -->
